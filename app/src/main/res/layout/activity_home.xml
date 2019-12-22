@@ -18,8 +18,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:itemTextColor="@color/colorwhite"
         android:fitsSystemWindows="true"
+        app:itemIconTint="@color/colorwhite"
+        app:itemTextColor="@color/colorwhite"
+        app:itemBackground="@drawable/drawer_selected_item"
         android:background="#D90E79"
         app:headerLayout="@layout/nav_header_home"
         app:menu="@menu/activity_home_drawer" />
