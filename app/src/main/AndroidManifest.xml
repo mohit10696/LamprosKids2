@@ -12,11 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".teacher.addTeacher"></activity>
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Login"  android:theme="@style/BlueActivityTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/BlueActivityTheme" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashTheme">

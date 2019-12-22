@@ -4,10 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.lamproskids.classinfo.classinfo;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.lamproskids.teacher.addTeacher;
+import com.example.lamproskids.teacher.manageteacher;
 import com.google.android.material.snackbar.Snackbar;
-
-import android.view.View;
 
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -29,6 +28,7 @@ import android.view.Menu;
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
+    int global_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +78,19 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.add_value) {
+             if (global_id == R.id.nav_tools) {
+                //manage teacher form from here
+                 Intent i = new Intent(Home.this, addTeacher.class);
+                 startActivity(i);
+
+            } else if (global_id == R.id.nav_share) {
+                //manange student form from here
+
+            } else{
+                 Snackbar.make(getCurrentFocus(), "Not available here", Snackbar.LENGTH_LONG)
+                         .setAction("Action", null).show();
+             }
             return true;
         }
 
@@ -91,7 +103,7 @@ public class Home extends AppCompatActivity
         // Handle navigation view item clicks here.
         Fragment fragment = null;
         int id = item.getItemId();
-
+        global_id = id;
         if (id == R.id.nav_home) {
             toolbar.setTitle("Welcome to Dashboard");
         } else if (id == R.id.nav_gallery) {
@@ -106,7 +118,13 @@ public class Home extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             toolbar.setTitle("Manage Students");
             fragment = new manangestudent();
-        } else if (id == R.id.nav_send) {
+        }else if (id == R.id.nav_cart){
+            toolbar.setTitle("Manage Cart");
+            // fragment = new manangestudent();
+        } else if (id == R.id.nav_order){
+            toolbar.setTitle("My Orders");
+            // fragment = new manangestudent();
+        }else if (id == R.id.nav_send) {
             Intent i = new Intent(Home.this,Login.class);
             startActivity(i);
             Home.this.finish();
@@ -116,7 +134,6 @@ public class Home extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.area,fragment);
             fragmentTransaction.commit();
-
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

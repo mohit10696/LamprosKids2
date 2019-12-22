@@ -1,4 +1,4 @@
-package com.example.lamproskids;
+package com.example.lamproskids.teacher;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.lamproskids.R;
 
 public class manageteacher extends androidx.fragment.app.Fragment {
 
