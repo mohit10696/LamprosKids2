@@ -15,30 +15,36 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/custom_ripple"
-        >
+        android:background="@drawable/custom_ripple">
+
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="10dp"
-            android:layout_height="80dp"
-            android:src="@color/colorPrimary"/>
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:scaleType="fitEnd"
+            android:src="@color/themeL" />
+
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:text="mohit sojitra"
-            android:layout_marginTop="10dp"/>
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/number"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="kemchho" />
+            android:layout_alignParentRight="true"
+            android:text="20000" />
 
     </RelativeLayout>
 

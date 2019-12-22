@@ -1,12 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
 
+    <RelativeLayout
+        android:id="@+id/cardabc"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="150dp"
+        android:background="@drawable/cardback">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorwhite"
+            android:text="Branch Details &amp; Docs"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/cardabc"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:id="@+id/relative"
+        android:background="#f5f5f5"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:textSize="20dp"
+            android:id="@+id/abc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branch name:"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/branchname"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/abc"
+            android:layout_marginLeft="10dp"
+            android:text="test"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:textStyle="bold"
+            android:id="@+id/xyz"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/branchname"
+            android:layout_marginTop="10dp"
+            android:text="Notes :"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:textSize="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xyz"
+            android:layout_marginTop="7dp"
+            android:text="abcdefghijklmnopqrstuvwxyz"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/mno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/branchname"
+            android:layout_marginEnd="-180dp"
+            android:text="Royality :"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/mno"
+            android:layout_marginEnd="-22dp"
+            android:text="90" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

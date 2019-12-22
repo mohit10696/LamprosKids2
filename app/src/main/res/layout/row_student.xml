@@ -10,7 +10,6 @@
     app:layout_constraintCircleRadius="10dp"
     android:layout_margin="10dp"
     android:fadingEdge="horizontal"
-
     app:cardBackgroundColor="#eff0f1"
     >
 
