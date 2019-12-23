@@ -25,11 +25,12 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                login.setVisibility(View.INVISIBLE);
                 lottieAnimationView.setVisibility(View.VISIBLE);
                 lottieAnimationView.playAnimation();
-                Intent i = new Intent(Login.this,Home.class);
-                startActivity(i);
-                Login.this.finish();
+//                Intent i = new Intent(Login.this,Home.class);
+//                startActivity(i);
+//                Login.this.finish();
             }
         });
     }

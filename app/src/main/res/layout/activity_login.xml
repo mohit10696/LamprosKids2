@@ -112,7 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/icon"
         app:lottie_autoPlay="false"
-        app:lottie_fileName="preloader.json"
+        app:lottie_fileName="preloader2.json"
         app:lottie_loop="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
