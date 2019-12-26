@@ -11,89 +11,117 @@
     app:cardBackgroundColor="#eff0f1">
 
     <RelativeLayout
-        android:padding="10dp"
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/profile"
-            android:src="@android:color/white"
-            android:layout_marginRight="10dp"></androidx.appcompat.widget.AppCompatImageView>
+            android:layout_marginRight="10dp"
+            android:src="@android:color/white"></androidx.appcompat.widget.AppCompatImageView>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/childusername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/profile"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:text="username"/>
+            android:text="TES/20-21/6"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
         <androidx.appcompat.widget.AppCompatTextView
-            android:textSize="20dp"
             android:id="@+id/studentname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/profile"
             android:layout_below="@+id/childusername"
-            android:text="Devansh Desai"/>
+            android:layout_toEndOf="@+id/profile"
+            android:text="Devansh Desai"
+            android:textSize="22dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:textSize="15dp"
             android:id="@+id/studentstd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/profile"
             android:layout_below="@+id/studentname"
-            android:text="J.R. KG"/>
+            android:layout_toEndOf="@+id/profile"
+            android:text="J.R. KG(2019-21)"
+            android:textSize="17dp" />
+
         <androidx.appcompat.widget.AppCompatTextView
-            android:textSize="15dp"
             android:id="@+id/studentGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/profile"
             android:layout_below="@+id/studentstd"
-            android:text="Male"/>
+            android:layout_toEndOf="@+id/profile"
+            android:text="Male"
+             />
 
         <View
             android:id="@+id/line"
             android:layout_width="match_parent"
-            android:layout_height="8dp"
+            android:layout_height="1dp"
             android:layout_marginTop="105dp"
-            android:background="@drawable/dottedline"
-            />
+            android:background="@drawable/dottedline" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/batchx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Batch"
-            android:textStyle="bold"
+            android:layout_below="@+id/line"
+            android:text="Batch: "
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="morning"
+            android:layout_toRightOf="@+id/batchx"
             android:layout_below="@+id/line"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/termx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/batchx"
             android:text="Term: "
-            android:textStyle="bold"
-            android:layout_below="@+id/batchx"/>
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02/12/2012"
+            android:layout_toRightOf="@+id/DOBX"
+            android:layout_below="@+id/line"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/DOBX"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DOB: "
-            android:textStyle="bold"
+            android:layout_below="@+id/line"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/line"/>
+            android:text="DOB: "
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full"
+            android:layout_toRightOf="@+id/batchx"
+            android:layout_below="@+id/batchx"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/contactx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/batchx"
             android:layout_centerHorizontal="true"
             android:text="Contact: "
-            android:textStyle="bold"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9368574123"
+            android:layout_toRightOf="@+id/contactx"
             android:layout_below="@+id/batchx"/>
 
         <Button
@@ -101,44 +129,47 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/contactx"
-            android:text="Re-send"/>
+            android:textColor="@color/colorwhite"
+            android:background="#ff0000"
+            android:text="Re-send" />
+
         <Button
+            android:layout_marginLeft="10dp"
             android:id="@+id/active"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/contactx"
             android:layout_toRightOf="@+id/resend"
-            android:text="Active"/>
+            android:textColor="@color/colorwhite"
+            android:background="@color/colorlogo"
+            android:text="Active" />
 
         <ImageButton
-            android:layout_marginTop="2dp"
             android:id="@+id/overflowbutton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:src="@drawable/ic_overflow_holo_dark"
             android:layout_below="@+id/contactx"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/dottedline"
-            />
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_overflow_holo_dark" />
 
         <ImageButton
             android:id="@+id/expandbutton"
-            android:layout_marginTop="2dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_down"
             android:layout_below="@+id/contactx"
+            android:layout_marginTop="2dp"
             android:layout_toLeftOf="@+id/overflowbutton"
-            android:background="@drawable/dottedline"
-            />
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_down" />
 
 
         <RelativeLayout
             android:id="@+id/submenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/expandbutton"
-            >
+            android:layout_below="@+id/expandbutton">
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -146,65 +177,103 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Actual Fees"
-                android:textStyle="bold"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10000"
+                android:layout_toRightOf="@+id/Actualfeesx"
                 />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/feespaidx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/Actualfeesx"
                 android:text="Fees Paid: "
-                android:textStyle="bold"
-                android:layout_below="@+id/Actualfeesx"/>
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000"
+                android:layout_toRightOf="@+id/discountx"
+                />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/discountx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Discount: "
-                android:textStyle="bold"
                 android:layout_centerHorizontal="true"
+                android:text="Discount: "
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000"
+                android:layout_toRightOf="@+id/feespaidx"
+                android:layout_below="@+id/Actualfeesx"
                 />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pendingx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/discountx"
                 android:layout_centerHorizontal="true"
                 android:text="Pending: "
-                android:textStyle="bold"
-                android:layout_below="@+id/discountx"/>
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_toRightOf="@+id/pendingx"
+                android:layout_below="@+id/discountx"
+                />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/adminapprovedx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Admin Approved: "
+                android:layout_below="@+id/feespaidx"
                 android:layout_marginTop="14dp"
-                android:textStyle="bold"
-                android:layout_below="@+id/feespaidx"/>
+                android:text="Admin Approved: "
+                android:textStyle="bold" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/trnsstatusx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Admin Approved: "
+                android:layout_below="@+id/adminapprovedx"
                 android:layout_marginTop="30dp"
-                android:textStyle="bold"
-                android:layout_below="@+id/adminapprovedx"/>
+                android:text="Admin Approved: "
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/adminb"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_toRightOf="@+id/adminapprovedx"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_below="@id/feespaidx"
-                android:text="Not Requried"/>
+                android:layout_toRightOf="@+id/adminapprovedx"
+                android:background="@color/colorlogo"
+                android:textColor="@color/colorwhite"
+                android:text="Not Requried" />
+
             <Button
                 android:id="@+id/trnsstatus"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_toRightOf="@+id/adminapprovedx"
+                android:layout_height="40dp"
                 android:layout_below="@id/adminb"
-                android:text="NO sts"/>
+                android:layout_toRightOf="@+id/adminapprovedx"
+                android:background="@color/colorlogo"
+                android:textColor="@color/colorwhite"
+                android:text="NO sts" />
 
         </RelativeLayout>
     </RelativeLayout>
-
 
 
 </com.google.android.material.card.MaterialCardView>
