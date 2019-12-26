@@ -114,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/batchx"
-            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@+id/DOBX"
             android:text="Contact: "
             android:textStyle="bold" />
         <TextView
@@ -219,9 +219,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/discountx"
-                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@+id/discountx"
                 android:text="Pending: "
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -245,7 +246,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/adminapprovedx"
                 android:layout_marginTop="30dp"
-                android:text="Admin Approved: "
+                android:text="Trans status: "
                 android:textStyle="bold" />
 
             <Button
