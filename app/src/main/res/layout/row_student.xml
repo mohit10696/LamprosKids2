@@ -1,50 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity=""
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="3dp"
     app:layout_constraintCircleRadius="10dp"
     android:layout_margin="10dp"
     android:fadingEdge="horizontal"
-    app:cardBackgroundColor="#eff0f1"
-    >
+    app:cardBackgroundColor="#eff0f1">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:padding="10dp"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:padding="10dp">
-        <TextView
-            android:id="@+id/username"
-            android:gravity="start"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/profile"
+            android:src="@android:color/white"
+            android:layout_marginRight="10dp"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/childusername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:layout_toEndOf="@+id/profile"
             android:textStyle="bold"
-            android:text="mohit sojitra" />
-
-
-        <TextView
-            android:id="@+id/number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/username"
-            android:layout_marginTop="2dp"
-            android:text="kemchho" />
-
-        <TextView
+            android:textSize="20dp"
+            android:text="username"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="20dp"
+            android:id="@+id/studentname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="Roll no here"
-            app:layout_constraintEnd_toEndOf="@+id/number"
+            android:layout_toEndOf="@+id/profile"
+            android:layout_below="@+id/childusername"
+            android:text="Devansh Desai"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="15dp"
+            android:id="@+id/studentstd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile"
+            android:layout_below="@+id/studentname"
+            android:text="J.R. KG"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="15dp"
+            android:id="@+id/studentGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile"
+            android:layout_below="@+id/studentstd"
+            android:text="Male"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/dottedline"
             />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/batchx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batch"
+            android:textStyle="bold"
+            android:layout_below="@+id/line"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/termx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Term: "
+            android:textStyle="bold"
+            android:layout_below="@+id/batchx"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/DOBX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOB: "
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/line"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contactx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Contact: "
+            android:textStyle="bold"
+            android:layout_below="@+id/batchx"/>
+
+        <Button
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/contactx"
+            android:text="Re-send"/>
+        <Button
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/contactx"
+            android:layout_toRightOf="@+id/resend"
+            android:text="Active"/>
+
+        <ImageButton
+            android:layout_marginTop="2dp"
+            android:id="@+id/overflowbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_overflow_holo_dark"
+            android:layout_below="@+id/contactx"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/dottedline"
+            />
+
+        <ImageButton
+            android:id="@+id/expandbutton"
+            android:layout_marginTop="2dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_down"
+            android:layout_below="@+id/contactx"
+            android:layout_toLeftOf="@+id/overflowbutton"
+            android:background="@drawable/dottedline"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/submenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandbutton"
+            >
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Actualfeesx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual Fees"
+                android:textStyle="bold"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/feespaidx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fees Paid: "
+                android:textStyle="bold"
+                android:layout_below="@+id/Actualfeesx"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/discountx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount: "
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pendingx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Pending: "
+                android:textStyle="bold"
+                android:layout_below="@+id/discountx"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/adminapprovedx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Approved: "
+                android:layout_marginTop="14dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/feespaidx"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trnsstatusx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Approved: "
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/adminapprovedx"/>
+            <Button
+                android:id="@+id/adminb"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/adminapprovedx"
+                android:layout_below="@id/feespaidx"
+                android:text="Not Requried"/>
+            <Button
+                android:id="@+id/trnsstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/adminapprovedx"
+                android:layout_below="@id/adminb"
+                android:text="NO sts"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 
 

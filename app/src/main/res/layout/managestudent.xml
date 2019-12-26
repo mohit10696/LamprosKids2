@@ -14,4 +14,14 @@
         app:srcCompat="@drawable/filter"
         android:tint="@android:color/white"
         app:backgroundTint="@color/colorPrimary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eff0f1"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:scrollbars="vertical"/>
 </RelativeLayout>

@@ -2,28 +2,24 @@ package com.example.lamproskids;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.example.lamproskids.classinfo.classinfo;
-import com.example.lamproskids.teacher.addTeacher;
-import com.example.lamproskids.teacher.manageteacher;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-
+import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.view.Menu;
+import com.example.lamproskids.classinfo.classinfo;
+import com.example.lamproskids.students.manangestudent;
+import com.example.lamproskids.teacher.addTeacher;
+import com.example.lamproskids.teacher.manageteacher;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
