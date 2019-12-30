@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/childinfo"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fathernamex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        >
+
+        <EditText
+            android:id="@+id/fathername"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mothernamex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fathernamex">
+
+        <EditText
+            android:id="@+id/mothername"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatheedux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/mothernamex">
+
+        <EditText
+            android:id="@+id/fatheredu"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motheredux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fatheedux">
+
+        <EditText
+            android:id="@+id/motheredu"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatheroccx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/motheredux">
+
+        <EditText
+            android:id="@+id/fatherocc"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motheroccx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fatheroccx">
+
+        <EditText
+            android:id="@+id/motherocc"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatherconx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/motheroccx">
+
+        <EditText
+            android:id="@+id/fathercon"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motherconx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fatherconx">
+
+        <EditText
+            android:id="@+id/mothercon"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatheremailx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/motherconx">
+
+        <EditText
+            android:id="@+id/fatheremail"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motheremailx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fatheremailx">
+
+        <EditText
+            android:id="@+id/motheremail"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fatheroffcx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/motheremailx">
+
+        <EditText
+            android:id="@+id/fatheroffc"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motheroffcx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fatheroffcx">
+
+        <EditText
+            android:id="@+id/motheroffc"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</RelativeLayout>
+</ScrollView>

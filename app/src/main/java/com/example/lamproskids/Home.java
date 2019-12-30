@@ -15,16 +15,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.lamproskids.classinfo.classinfo;
+import com.example.lamproskids.students.addStudent;
 import com.example.lamproskids.students.manangestudent;
 import com.example.lamproskids.teacher.addTeacher;
 import com.example.lamproskids.teacher.manageteacher;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
     int global_id;
+    Menu dynamicmenu;
+    boolean menuche = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +64,9 @@ public class Home extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        //getMenuInflater().inflate(R.menu.home, menu);
+        dynamicmenu = menu;
+
         return true;
     }
 
@@ -82,10 +86,11 @@ public class Home extends AppCompatActivity
 
             } else if (global_id == R.id.nav_share) {
                 //manange student form from here
-
+                 Intent i = new Intent(Home.this, addStudent.class);
+                 startActivity(i);
             } else{
-                 Snackbar.make(getCurrentFocus(), "Not available here", Snackbar.LENGTH_LONG)
-                         .setAction("Action", null).show();
+//                 Snackbar.make(findViewById(R.id.home), "Not available here", Snackbar.LENGTH_LONG)
+//                         .setAction("Action", null).show();
              }
             return true;
         }
@@ -104,20 +109,44 @@ public class Home extends AppCompatActivity
             toolbar.setTitle("Welcome to Dashboard");
         } else if (id == R.id.nav_gallery) {
             toolbar.setTitle("Branch info");
+            if(menuche){
+                dynamicmenu.removeItem(R.id.add_value);
+                menuche = false;
+            }
             fragment = new branch();
         } else if (id == R.id.nav_slideshow) {
             toolbar.setTitle("Class info");
+            if(menuche){
+                dynamicmenu.removeItem(R.id.add_value);
+                menuche = false;
+            }
             fragment = new classinfo();
         } else if (id == R.id.nav_tools) {
             toolbar.setTitle("Manage Teachers");
+            if (!menuche){
+                getMenuInflater().inflate(R.menu.home, dynamicmenu);
+                menuche = true;
+            }
             fragment = new manageteacher();
         } else if (id == R.id.nav_share) {
             toolbar.setTitle("Manage Students");
+            if (!menuche){
+                getMenuInflater().inflate(R.menu.home, dynamicmenu);
+                menuche = true;
+            }
             fragment = new manangestudent();
         }else if (id == R.id.nav_cart){
+            if(menuche){
+                dynamicmenu.removeItem(R.id.add_value);
+                menuche = false;
+            }
             toolbar.setTitle("Manage Cart");
             // fragment = new manangestudent();
         } else if (id == R.id.nav_order){
+            if(menuche){
+                dynamicmenu.removeItem(R.id.add_value);
+                menuche = false;
+            }
             toolbar.setTitle("My Orders");
             // fragment = new manangestudent();
         }else if (id == R.id.nav_send) {

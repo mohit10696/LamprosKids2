@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:stepUi="http://schemas.android.com/apk/res-auto"
+    tools:context=".students.addStudent">
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:scrollbars="vertical"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.cheekiat.indicatorsteplib.StepProgress
+            android:id="@+id/step_progress_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            stepUi:barHeight="30"
+            stepUi:dotDefaultSize="30dp"
+            stepUi:dotSelectedSize="30dp"
+            stepUi:itemMargins="5dp"
+            stepUi:indicator_mode="stepWithBar"
+            stepUi:selectedBarColor="#94be37"
+            stepUi:unselectBarColor="#999999" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

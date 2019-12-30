@@ -115,6 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/batchx"
             android:layout_alignStart="@+id/DOBX"
+            android:layout_marginBottom="10dp"
             android:text="Contact: "
             android:textStyle="bold" />
         <TextView
@@ -126,23 +127,26 @@
 
         <Button
             android:id="@+id/resend"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/contactx"
             android:textColor="@color/colorwhite"
-            android:background="#ff0000"
+            android:background="@drawable/btn_bg_selector2"
+            android:backgroundTint="#ff5050"
             android:text="Re-send" />
 
         <Button
             android:layout_marginLeft="10dp"
             android:id="@+id/active"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/contactx"
             android:layout_toRightOf="@+id/resend"
             android:textColor="@color/colorwhite"
-            android:background="@color/colorlogo"
-            android:text="Active" />
+            android:background="@drawable/btn_bg_selector2"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Active"
+            />
 
         <ImageButton
             android:id="@+id/overflowbutton"
@@ -251,7 +255,7 @@
 
             <Button
                 android:id="@+id/adminb"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:layout_height="40dp"
@@ -259,17 +263,19 @@
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/feespaidx"
                 android:layout_toRightOf="@+id/adminapprovedx"
-                android:background="@color/colorlogo"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/btn_bg_selector2"
                 android:textColor="@color/colorwhite"
                 android:text="Not Requried" />
 
             <Button
                 android:id="@+id/trnsstatus"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_below="@id/adminb"
                 android:layout_toRightOf="@+id/adminapprovedx"
-                android:background="@color/colorlogo"
+                android:backgroundTint="@color/colorPrimary"
+                android:background="@drawable/btn_bg_selector2"
                 android:textColor="@color/colorwhite"
                 android:text="NO sts" />
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp" android:layout_height="wrap_content"
+    android:background="@color/colorwhite"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter dropdown will be here"
+        />
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter will be here"
+        android:layout_below="@+id/a"
+        />
+    <TextView
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter will be here"
+        android:layout_below="@+id/b"
+        />
+    <TextView
+        android:id="@+id/d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter will be here"
+        android:layout_below="@+id/c"
+        />
+    <TextView
+        android:id="@+id/e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter will be here"
+        android:layout_below="@+id/d"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/close"
+        android:layout_below="@+id/e"
+        android:text="Apply"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/apply"
+        android:layout_below="@+id/e"
+        android:layout_toRightOf="@+id/close"
+        android:text="close"/>
+
+</RelativeLayout>

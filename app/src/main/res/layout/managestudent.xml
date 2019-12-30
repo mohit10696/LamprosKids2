@@ -24,4 +24,10 @@
         android:focusable="true"
         android:padding="8dp"
         android:scrollbars="vertical"/>
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center"
+        android:id="@+id/filterstudentbox"/>
 </RelativeLayout>
