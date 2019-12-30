@@ -1,5 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
 
-</RelativeLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/childinfo"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="15dp"
+        android:paddingLeft="25dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/emnm4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pediatrician's Information"
+            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pednamex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/emnm4"
+            >
+
+            <EditText
+                android:id="@+id/pedname"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Pediatrician Name "
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedconx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/pednamex">
+
+            <EditText
+                android:id="@+id/pedcon"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Pediatrician Contact "
+                android:inputType="number"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Allergiesx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/pedconx">
+
+            <EditText
+                android:id="@+id/Allergies"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Allergies"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/emnm5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Discount * "
+            android:textSize="30dp"
+            android:layout_below="@+id/Allergiesx"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/discounttx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/emnm5"
+            >
+
+            <EditText
+                android:id="@+id/discountt"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Discount"
+                android:inputType="number"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/disreasonx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/discounttx">
+
+            <EditText
+                android:id="@+id/disreason"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Discount Reason"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/emnm6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child Remarks"
+            android:textSize="30dp"
+            android:layout_below="@+id/disreasonx"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/reamarkx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/emnm6">
+
+            <EditText
+                android:id="@+id/remark"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Remark"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+</ScrollView>

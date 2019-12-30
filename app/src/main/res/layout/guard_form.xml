@@ -1,5 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
 
-</RelativeLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/childinfo"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="15dp"
+        android:paddingLeft="25dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/emnm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardian's and Sibling's Information"
+            android:textSize="25dp"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/guardnamex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/emnm3"
+            >
+
+            <EditText
+                android:id="@+id/guardname"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Guardian name"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/guardrilex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/guardnamex">
+
+            <EditText
+                android:id="@+id/guardrile"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Guardian Realtion"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/guardconx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/guardrilex">
+
+            <EditText
+                android:id="@+id/guardcon"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Guardian Contact"
+                android:inputType="number"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bronamex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/guardconx">
+
+            <EditText
+                android:id="@+id/broname"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Brother name"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sisnamex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/bronamex">
+
+            <EditText
+                android:id="@+id/sisname"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Sister name"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/broschoolx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/sisnamex">
+
+            <EditText
+                android:id="@+id/broschool"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Brother School"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sisschoolx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/broschoolx">
+
+            <EditText
+                android:id="@+id/sisschool"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Sister school"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/brostdx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/sisschoolx">
+
+            <EditText
+                android:id="@+id/brostd"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Brother STD"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sisstdx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/brostdx">
+
+            <EditText
+                android:id="@+id/sisstd"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:hint="Sister STD"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </RelativeLayout>
+</ScrollView>

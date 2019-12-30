@@ -5,14 +5,24 @@
     android:layout_height="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/childinfo"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="15dp"
+    android:paddingLeft="25dp">
 
-
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emnm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parent Information"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"/>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fathernamex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/emnm2"
         >
 
         <EditText
