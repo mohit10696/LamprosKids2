@@ -2,6 +2,8 @@ package com.example.lamproskids.students;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -14,18 +16,23 @@ import com.cheekiat.indicatorsteplib.DotOnClickListener;
 import com.cheekiat.indicatorsteplib.StepProgress;
 import com.example.lamproskids.R;
 
-public class addStudent extends AppCompatActivity implements fragment_addchildinfo.OnFragmentInteractionListener,fragment_addparentinfo.OnFragmentInteractionListener{
+public class addStudent extends AppCompatActivity implements fragment_addguardinfo.OnFragmentInteractionListener,fragment_addnotesinfo.OnFragmentInteractionListener,  fragment_addchildinfo.OnFragmentInteractionListener,fragment_addparentinfo.OnFragmentInteractionListener{
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 4;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
     StepProgress layoutProgress1;
-    Fragment fragment[] = new Fragment[2];
+    Button next,pre;
+    int currentpage=0;
+    Fragment fragment[] = new Fragment[4];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_student);
+        setTitle("Add new Children");
         layoutProgress1 = findViewById(R.id.step_progress_1);
+        next = findViewById(R.id.nextbutton);
+        pre = findViewById(R.id.prebutton);
         mPager =  findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
@@ -38,6 +45,24 @@ public class addStudent extends AppCompatActivity implements fragment_addchildin
         });
         fragment[0] = new fragment_addchildinfo();
         fragment[1] = new fragment_addparentinfo();
+        fragment[2] = new fragment_addguardinfo();
+        fragment[3] = new fragment_addnotesinfo();
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentpage = mPager.getCurrentItem();
+                if(currentpage<NUM_PAGES)
+                mPager.setCurrentItem(++currentpage);
+            }
+        });
+        pre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentpage = mPager.getCurrentItem();
+                if(currentpage<NUM_PAGES)
+                mPager.setCurrentItem(--currentpage);
+            }
+        });
     }
 
 

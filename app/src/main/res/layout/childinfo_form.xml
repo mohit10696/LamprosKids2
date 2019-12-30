@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/childinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:padding="15dp"
+        android:paddingLeft="25dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emnm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Children Information"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fnamem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/emnm">
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Firstname"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lnamem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/fnamem">
+
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Last name"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dobm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/lnamem">
+
+        <EditText
+            android:id="@+id/Dobpicker"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Date of birth"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/toilet"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Is Toilet Trained ?"
+        android:layout_below="@id/dobm"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/toilet"
+        android:layout_below="@+id/dobm"
+        android:layout_toRightOf="@+id/toilet"
+         />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/toilet"
+        android:hint="Address"
+        >
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pincodem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/addressm">
+
+        <EditText
+            android:id="@+id/pincode"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/countrym"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/pincodem">
+
+        <EditText
+            android:id="@+id/country"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Country"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/statem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/countrym">
+
+        <EditText
+            android:id="@+id/state"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="State"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/citym"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/statem">
+
+        <EditText
+            android:id="@+id/city"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="City"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/batch"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Batch"
+        android:layout_below="@id/citym"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/batchs"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/batch"
+        android:layout_below="@+id/citym"
+        android:layout_toRightOf="@+id/batch"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/classs"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Class"
+        android:layout_below="@id/batch"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/classss"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/batch"
+        android:layout_below="@+id/batchs"
+        android:layout_toRightOf="@+id/classs"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/divison"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Divison"
+        android:layout_below="@id/classs"/>
+    <Spinner
+        android:id="@+id/divisons"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/classs"
+        android:layout_toRightOf="@+id/divison"
+        android:entries="@array/batch"
+        android:gravity="center"
+        android:textSize="20dp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Year: "
+        android:layout_below="@id/divison"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/years"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/batch"
+        android:layout_below="@+id/divisons"
+        android:layout_toRightOf="@+id/year"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/term"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Term: "
+        android:layout_below="@id/year"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/term"
+        android:layout_below="@+id/year"
+        android:layout_toRightOf="@+id/term"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/blood"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Blood group: "
+        android:layout_below="@id/term"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/bloods"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/bloodgroup"
+        android:layout_below="@+id/term"
+        android:layout_toRightOf="@+id/blood"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Gender: "
+        android:layout_below="@id/blood"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/genders"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/gender"
+        android:layout_below="@+id/blood"
+        android:layout_toRightOf="@+id/gender"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/topsize"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Top size: "
+        android:layout_below="@id/gender"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/topsizes"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/size"
+        android:layout_below="@+id/gender"
+        android:layout_toRightOf="@+id/topsize"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="7dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/bottomsize"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:text="Bottom size: "
+        android:layout_below="@id/topsize"/>
+    <Spinner
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/bottomsizes"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/size"
+        android:layout_below="@+id/topsize"
+        android:layout_toRightOf="@+id/bottomsize"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/prepreschoolm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/bottomsize">
+
+        <EditText
+            android:id="@+id/prepreschool"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Previous Pre School"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/preclassm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/prepreschoolm">
+
+        <EditText
+            android:id="@+id/preclass"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Previous Class"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/heightm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/preclassm">
+
+        <EditText
+            android:id="@+id/height"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Height"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weightm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/heightm">
+
+        <EditText
+            android:id="@+id/weight"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Weight"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/knolm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_below="@+id/weightm">
+
+        <EditText
+            android:id="@+id/knowl"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Known Languages"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</RelativeLayout>
+</ScrollView>

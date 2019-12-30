@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Father name"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Mother name"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Father Education"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Mother Education"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Father Occupation"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -128,8 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
-            android:inputType="text"
+            android:hint="Father Contact"
+            android:inputType="number"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
 
@@ -146,8 +146,8 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
-            android:inputType="text"
+            android:hint="Mother Contact"
+            android:inputType="number"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
 
@@ -164,7 +164,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Father E-mail"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -182,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Mother E-mail"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -200,7 +200,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Father office contact"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
@@ -218,7 +218,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="Firstname"
+            android:hint="Mother office contact"
             android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />

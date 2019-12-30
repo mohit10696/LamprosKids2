@@ -10,10 +10,12 @@
 
 
     <androidx.viewpager.widget.ViewPager
+        android:padding="10dp"
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="60dp"
         android:scrollbars="vertical"/>
 
 
@@ -25,20 +27,39 @@
         android:orientation="vertical">
 
         <com.cheekiat.indicatorsteplib.StepProgress
-            android:id="@+id/step_progress_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            stepUi:barHeight="30"
-            stepUi:dotDefaultSize="30dp"
-            stepUi:dotSelectedSize="30dp"
-            stepUi:itemMargins="5dp"
-            stepUi:indicator_mode="stepWithBar"
-            stepUi:selectedBarColor="#94be37"
-            stepUi:unselectBarColor="#999999" />
+        android:id="@+id/step_progress_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        stepUi:barHeight="30"
+        stepUi:dotDefaultSize="30dp"
+        stepUi:dotSelectedSize="30dp"
+        stepUi:itemMargins="5dp"
+        stepUi:indicator_mode="stepWithBar"
+        stepUi:selected="@drawable/selected"
+        stepUi:selectedBarColor="@color/colorAccent" />
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg_selector2"
+        android:textColor="@color/colorwhite"
+        android:text="NEXT"/>
+    <Button
+        android:id="@+id/prebutton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_bg_selector2"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorwhite"
+        android:text="PREVIOUS"/>
 
 </RelativeLayout>
