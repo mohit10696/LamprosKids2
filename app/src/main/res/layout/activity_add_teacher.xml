@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".teacher.addTeacher"
-    android:padding="10dp"
+    android:padding="20dp"
     >
 
     <com.google.android.material.textfield.TextInputLayout
@@ -103,44 +103,70 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/userrole"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Userrole"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/password_layout"
-        >
+        android:dropDownHeight="wrap_content"
+        app:met_floatingLabel="normal" />
 
-    </androidx.appcompat.widget.AppCompatSpinner>
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
 
-    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/clas"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Class"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/userrole"
-        >
+        android:dropDownHeight="wrap_content"
+        app:met_floatingLabel="normal" />
 
-    </androidx.appcompat.widget.AppCompatSpinner>
 
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
 
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/divison"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Divison"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/clas"
-        >
+        android:dropDownHeight="wrap_content"
+        app:met_floatingLabel="normal" />
 
-    </androidx.appcompat.widget.AppCompatSpinner>
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="200dp"
+
+
+    <Button
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/divison"
+        android:background="@drawable/btn_bg_selector2"
+        android:layout_marginTop="10dp"
         android:id="@+id/submit"
+        android:textColor="@color/colorwhite"
         android:text="Submit"/>
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="200dp"
+    <Button
+        android:textColor="@color/colorwhite"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg_selector2"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintTop_toBottomOf="@id/divison"
         app:layout_constraintLeft_toRightOf="@+id/submit"
         android:id="@+id/cancel"

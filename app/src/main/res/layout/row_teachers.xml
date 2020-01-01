@@ -1,53 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity=""
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="3dp"
     app:layout_constraintCircleRadius="10dp"
     android:layout_margin="10dp"
     android:fadingEdge="horizontal"
-    app:cardBackgroundColor="#eff0f1"
-    >
+    app:cardBackgroundColor="#eff0f1">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
-        <TextView
-            android:id="@+id/name"
-            android:gravity="start"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@android:color/white"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teacherusername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:text="mohit sojitra" />
+            android:layout_toEndOf="@+id/profile"
+            android:text="USERNAMR TEACHER"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teachername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teacherusername"
+            android:layout_toEndOf="@+id/profile"
+            android:text="Devansh Desai"
+            android:textSize="23dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/teacherbranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teachername"
+            android:layout_toEndOf="@+id/profile"
+            android:text="branch"
+            android:textSize="17dp" />
 
 
-        <TextView
-            android:id="@+id/number"
+        <View
+            android:id="@+id/line"
             android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dottedline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/classx"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/name"
-            android:layout_marginTop="2dp"
-            android:text="kemchho" />
+            android:layout_below="@+id/line"
+            android:text="Class: "
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/classs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="morning"
+            android:layout_toRightOf="@+id/classx"
+            android:layout_below="@+id/line"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="Roll no here"
-            app:layout_constraintEnd_toEndOf="@+id/number"
-            tools:layout_editor_absoluteY="6dp" />
+            android:text="B"
+            android:layout_toRightOf="@+id/divisonx"
+            android:layout_below="@+id/line"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/divisonx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:text="Divison: "
+            android:textStyle="bold" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/createdatx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created At: "
+            android:textStyle="bold"
+            android:layout_below="@+id/classs"/>
+        <TextView
+            android:id="@+id/createdat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/20/30"
+            android:layout_below="@+id/classs"
+            android:layout_toRightOf="@+id/createdatx"/>
 
 
+        <TextView
+            android:id="@+id/updatedatx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated At: "
+            android:textStyle="bold"
+            android:layout_below="@+id/createdatx"/>
+        <TextView
+            android:id="@+id/updatedat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/20/30"
+            android:layout_below="@+id/createdatx"
+            android:layout_toRightOf="@+id/updatedatx"/>
+
+
+        <TextView
+            android:id="@+id/statusx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status : "
+            android:textStyle="bold"
+            android:layout_below="@+id/updatedatx"/>
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XYZ"
+            android:layout_below="@+id/updatedatx"
+            android:layout_toRightOf="@+id/statusx"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actionx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updatedatx"
+            android:layout_alignStart="@+id/divisonx"
+            android:text="Action: "
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/actionedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createdatx"
+            android:layout_toRightOf="@+id/actionx"
+            android:src="@drawable/ic_edit"
+            />
+        <ImageButton
+            android:id="@+id/actiondelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createdatx"
+            android:layout_toRightOf="@+id/actionedit"
+            android:src="@drawable/ic_delete"
+            />
+
+
+
+
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitEnd"
+        android:src="@color/colorPrimary" />
 
 </com.google.android.material.card.MaterialCardView>

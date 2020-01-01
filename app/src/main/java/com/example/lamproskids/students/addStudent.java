@@ -63,6 +63,31 @@ public class addStudent extends AppCompatActivity implements fragment_addguardin
                 mPager.setCurrentItem(--currentpage);
             }
         });
+        mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(position == 3)submitform();
+                if(next.getText().equals("SUBMIT")&&position!=3){
+                    next.setText("NEXT");
+                    next.setBackground(getApplication().getResources().getDrawable(R.color.colorlogo));
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+              //  Toast.makeText(getApplicationContext(),"200",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                //Toast.makeText(getApplicationContext(),"300",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void submitform() {
+        next.setText("SUBMIT");
+        next.setBackground(this.getResources().getDrawable(R.color.submit));
     }
 
 
@@ -70,6 +95,8 @@ public class addStudent extends AppCompatActivity implements fragment_addguardin
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {

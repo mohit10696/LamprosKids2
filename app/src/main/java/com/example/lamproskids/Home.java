@@ -31,6 +31,7 @@ public class Home extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Welcome to Dashboard");
         setSupportActionBar(toolbar);
@@ -49,6 +50,16 @@ public class Home extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        dashboardview();
+    }
+
+    private void dashboardview() {
+        Fragment fragment = null;
+        fragment = new dashboard();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.area,fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -107,6 +118,7 @@ public class Home extends AppCompatActivity
         global_id = id;
         if (id == R.id.nav_home) {
             toolbar.setTitle("Welcome to Dashboard");
+            fragment = new dashboard();
         } else if (id == R.id.nav_gallery) {
             toolbar.setTitle("Branch info");
             if(menuche){
