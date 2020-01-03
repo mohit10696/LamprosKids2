@@ -1,7 +1,10 @@
 package com.example.lamproskids.students;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.cheekiat.indicatorsteplib.DotOnClickListener;
 import com.cheekiat.indicatorsteplib.StepProgress;
 import com.example.lamproskids.R;
+import com.example.lamproskids.upload_student;
 
 public class addStudent extends AppCompatActivity implements fragment_addguardinfo.OnFragmentInteractionListener,fragment_addnotesinfo.OnFragmentInteractionListener,  fragment_addchildinfo.OnFragmentInteractionListener,fragment_addparentinfo.OnFragmentInteractionListener{
 
@@ -89,13 +93,23 @@ public class addStudent extends AppCompatActivity implements fragment_addguardin
         next.setText("SUBMIT");
         next.setBackground(this.getResources().getDrawable(R.color.submit));
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // R.menu.mymenu is a reference to an xml file named mymenu.xml which should be inside your res/menu directory.
+        // If you don't have res/menu, just create a directory named "menu" inside res
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
 
+    public void uploadbutton(MenuItem item) {
+        Intent i = new Intent(addStudent.this, upload_student.class);
+        startActivity(i);
+    }
 
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {

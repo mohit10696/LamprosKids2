@@ -16,19 +16,12 @@
         android:layout_height="wrap_content"
         android:padding="10dp">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/profile"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginRight="10dp"
-            android:src="@android:color/white"></androidx.appcompat.widget.AppCompatImageView>
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/teacherusername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/profile"
-            android:text="USERNAMR TEACHER"
+            android:text="USERNAME TEACHER"
             android:textSize="22dp"
             android:textStyle="bold" />
 

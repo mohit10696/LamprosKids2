@@ -36,7 +36,7 @@ public class manageteacher extends androidx.fragment.app.Fragment {
         modelteachers.add(new modelteacher());
         modelteachers.add(new modelteacher());
         modelteachers.add(new modelteacher());
-        adpater_teacher adapter = new adpater_teacher(modelteachers);
+        adpater_teacher adapter = new adpater_teacher(modelteachers,getContext());
         RecyclerView recyclerView = view.findViewById(R.id.recycleview3);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

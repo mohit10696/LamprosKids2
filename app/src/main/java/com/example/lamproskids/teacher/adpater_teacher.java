@@ -1,5 +1,6 @@
 package com.example.lamproskids.teacher;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +15,10 @@ import java.util.List;
 public class adpater_teacher extends RecyclerView.Adapter<holder_teacher> {
 
     private List<modelteacher> list;
-    public adpater_teacher(List<modelteacher> list) {
+    Context context;
+    public adpater_teacher(List<modelteacher> list, Context context) {
         this.list = list;
+        this.context = context;
     }
 
     @NonNull

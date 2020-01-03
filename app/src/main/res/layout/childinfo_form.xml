@@ -85,16 +85,15 @@
         android:layout_marginRight="5dp"
         android:text="Is Toilet Trained ?"
         android:layout_below="@id/dobm"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
+        android:hint="Select"
         android:id="@+id/tt"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:entries="@array/toilet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/dobm"
         android:layout_toRightOf="@+id/toilet"
-        android:background="@drawable/spinner_background"
          />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/addressm"
@@ -205,19 +204,17 @@
         android:layout_height="40dp"
         android:gravity="center"
         android:layout_marginRight="5dp"
-        android:text="Batch"
+        android:text="Batch: "
         android:layout_below="@id/citym"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
-        android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/batchs"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:entries="@array/batch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/citym"
-        android:layout_toRightOf="@+id/batch"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -229,19 +226,19 @@
         android:layout_height="40dp"
         android:gravity="center"
         android:layout_marginRight="5dp"
-        android:text="Class"
+        android:text="Class: "
         android:layout_below="@id/batch"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/classss"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/batch"
         android:layout_below="@+id/batchs"
-        android:layout_toRightOf="@+id/classs"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -253,18 +250,18 @@
         android:layout_height="40dp"
         android:gravity="center"
         android:layout_marginRight="5dp"
-        android:text="Divison"
+        android:text="Divison: "
         android:layout_below="@id/classs"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:id="@+id/divisons"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/classs"
-        android:layout_toRightOf="@+id/divison"
+        android:layout_toRightOf="@+id/blood"
         android:entries="@array/batch"
-        android:gravity="center"
+        android:gravity="start"
         android:textSize="20dp" />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -278,17 +275,17 @@
         android:layout_marginRight="5dp"
         android:text="Year: "
         android:layout_below="@id/divison"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/years"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/batch"
         android:layout_below="@+id/divisons"
-        android:layout_toRightOf="@+id/year"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -302,17 +299,17 @@
         android:layout_marginRight="5dp"
         android:text="Term: "
         android:layout_below="@id/year"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/terms"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/term"
         android:layout_below="@+id/year"
-        android:layout_toRightOf="@+id/term"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -326,14 +323,14 @@
         android:layout_marginRight="5dp"
         android:text="Blood group: "
         android:layout_below="@id/term"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/bloods"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/bloodgroup"
         android:layout_below="@+id/term"
         android:layout_toRightOf="@+id/blood"
@@ -350,17 +347,17 @@
         android:layout_marginRight="5dp"
         android:text="Gender: "
         android:layout_below="@id/blood"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/genders"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/gender"
         android:layout_below="@+id/blood"
-        android:layout_toRightOf="@+id/gender"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginBottom="10dp"
@@ -374,17 +371,17 @@
         android:layout_marginRight="5dp"
         android:text="Top size: "
         android:layout_below="@id/gender"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:layout_marginBottom="10dp"
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/topsizes"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/size"
         android:layout_below="@+id/gender"
-        android:layout_toRightOf="@+id/topsize"
+        android:layout_toRightOf="@+id/blood"
         />
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_marginLeft="7dp"
@@ -397,16 +394,16 @@
         android:layout_marginRight="5dp"
         android:text="Bottom size: "
         android:layout_below="@id/topsize"/>
-    <Spinner
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
         android:background="@drawable/spinner_background"
         android:textSize="20dp"
-        android:gravity="center"
+        android:gravity="start"
         android:id="@+id/bottomsizes"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:entries="@array/size"
         android:layout_below="@+id/topsize"
-        android:layout_toRightOf="@+id/bottomsize"
+        android:layout_toRightOf="@+id/blood"
         />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/prepreschoolm"

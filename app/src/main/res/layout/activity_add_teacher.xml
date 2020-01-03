@@ -78,7 +78,7 @@
             android:layout_height="65dp"
             android:backgroundTint="@color/colorPrimary"
             android:hint="Username"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:padding="7dp"
             android:textColor="@color/colorPrimary" />
 
@@ -155,10 +155,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/divison"
         android:background="@drawable/btn_bg_selector2"
+        android:backgroundTint="@color/colorAccent"
         android:layout_marginTop="10dp"
-        android:id="@+id/submit"
+        android:id="@+id/teachercancle"
         android:textColor="@color/colorwhite"
-        android:text="Submit"/>
+        android:text="Cancle"/>
     <Button
         android:textColor="@color/colorwhite"
         android:layout_width="150dp"
@@ -166,10 +167,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_bg_selector2"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/submit"
         app:layout_constraintTop_toBottomOf="@id/divison"
-        app:layout_constraintLeft_toRightOf="@+id/submit"
-        android:id="@+id/cancel"
-        android:text="Cancle"/>
+        app:layout_constraintLeft_toRightOf="@+id/teachercancle"
+        android:id="@+id/addteacher"
+        android:text="Submit"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

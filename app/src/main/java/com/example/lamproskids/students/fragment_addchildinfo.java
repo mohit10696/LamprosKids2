@@ -7,23 +7,28 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.lamproskids.R;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class fragment_addchildinfo extends Fragment {
     TextView dob;
+    View v;
     private OnFragmentInteractionListener mListener;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.childinfo_form, container, false);
-
+        v = inflater.inflate(R.layout.childinfo_form, container, false);
+        adddropdown();
 
         //text.setText("Page "+mParam1);
         dob = v.findViewById(R.id.Dobpicker);
@@ -48,6 +53,71 @@ public class fragment_addchildinfo extends Fragment {
             }
         });
         return v;
+    }
+
+    private void adddropdown() {
+        MaterialBetterSpinner spinner2 = v.findViewById(R.id.tt);
+        List<String> list = new ArrayList<String>();
+        list.add("Yes");
+        list.add("No");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(dataAdapter);
+
+        spinner2 = v.findViewById(R.id.batchs);
+        String[] ary = getResources().getStringArray(R.array.batch);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+        spinner2.setAdapter(dataAdapter);
+
+        spinner2 = v.findViewById(R.id.classss);
+        ary = getResources().getStringArray(R.array.classs);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+        spinner2.setAdapter(dataAdapter);
+
+        spinner2 = v.findViewById(R.id.divisons);
+        ary = getResources().getStringArray(R.array.toilet);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+        spinner2.setAdapter(dataAdapter);
+
+        spinner2 = v.findViewById(R.id.years);
+        ary = getResources().getStringArray(R.array.classs);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+        spinner2.setAdapter(dataAdapter);
+
+        spinner2 = v.findViewById(R.id.terms);
+        ary = getResources().getStringArray(R.array.term);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+
+        spinner2.setAdapter(dataAdapter);
+        spinner2 = v.findViewById(R.id.bloods);
+        ary = getResources().getStringArray(R.array.bloodgroup);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+
+        spinner2.setAdapter(dataAdapter);
+        spinner2 = v.findViewById(R.id.genders);
+        ary = getResources().getStringArray(R.array.gender);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+
+        spinner2.setAdapter(dataAdapter);
+        spinner2 = v.findViewById(R.id.topsizes);
+        ary = getResources().getStringArray(R.array.size);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+
+        spinner2.setAdapter(dataAdapter);
+        spinner2 = v.findViewById(R.id.bottomsizes);
+        ary = getResources().getStringArray(R.array.size);
+        dataAdapter = new ArrayAdapter<String>(getActivity(),
+                R.layout.spinnerdesign, ary);
+        spinner2.setAdapter(dataAdapter);
     }
 
     public fragment_addchildinfo() {
