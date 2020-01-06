@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".upload_student">
+    tools:context=".students.upload_student">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclevieimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eff0f1"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addimage"

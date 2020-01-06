@@ -18,7 +18,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.cheekiat.indicatorsteplib.DotOnClickListener;
 import com.cheekiat.indicatorsteplib.StepProgress;
 import com.example.lamproskids.R;
-import com.example.lamproskids.upload_student;
 
 public class addStudent extends AppCompatActivity implements fragment_addguardinfo.OnFragmentInteractionListener,fragment_addnotesinfo.OnFragmentInteractionListener,  fragment_addchildinfo.OnFragmentInteractionListener,fragment_addparentinfo.OnFragmentInteractionListener{
 
