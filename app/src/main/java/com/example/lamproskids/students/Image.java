@@ -1,21 +1,33 @@
 package com.example.lamproskids.students;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.lamproskids.R;
-import java.util.ArrayList;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lamproskids.R;
+
+import java.util.ArrayList;
+
 class model_image {
+    Bitmap bitmap;
     public model_image() {
     }
-    public model_image(int image, String name) {
-        this.image = image;
+//    public model_image(int image, String name) {
+//        //this.image = image;
+//        this.name = name;
+//
+//    }
+
+
+    public model_image(Bitmap bitmap, String name) {
+        this.bitmap = bitmap;
         this.name = name;
     }
 
@@ -67,7 +79,8 @@ class adpater_image extends RecyclerView.Adapter<holder_image>{
     @Override
     public void onBindViewHolder(@NonNull holder_image holder, int position) {
         holder.text1.setText(model.get(position).getName());
-        holder.imageView.setImageResource(model.get(position).getImage());
+       // holder.imageView.setImageResource(model.get(position).getImage());
+        holder.imageView.setImageBitmap(model.get(position).bitmap);
     }
 
     @Override

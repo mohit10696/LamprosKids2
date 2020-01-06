@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
             android:src="@drawable/ic_delete"
             android:layout_alignParentRight="true"
             />
@@ -31,9 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_below="@+id/deletenumber"
-            android:layout_marginTop="5dp"
             android:padding="5dp"
-            android:scaleType="fitStart"
+            android:scaleType="centerInside"
             android:src="@drawable/dummy" />
     </RelativeLayout>
 
@@ -44,7 +42,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text="Image name"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
 
