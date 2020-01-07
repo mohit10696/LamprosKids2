@@ -2,13 +2,16 @@ package com.example.lamproskids.students;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -20,12 +23,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lamproskids.R;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class upload_student extends AppCompatActivity {
-    ArrayList<model_image> model_images=new ArrayList<>();;
+    ArrayList<model_image> model_images=new ArrayList<>();
     String userChoosenTask;
     RecyclerView recyclerView;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
@@ -40,8 +44,58 @@ public class upload_student extends AppCompatActivity {
         setTitle("Student images");
         recyclerView = findViewById(R.id.recyclevieimage);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        demoimage();
+    }
+
+    private void demoimage () {
+//
+//        Handler uiHandler = new Handler(Looper.getMainLooper());
+//       uiHandler.post(new Runnable() {
+//           @Override
+//           public void run() {
+//               String imageUrl = "https://via.placeholder.com/500";
+//               // Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//               try {
+//                   model_images.add(new model_image(Picasso.get().load(imageUrl).get(),"Render from uri"));
+//               } catch (IOException e) {
+//                   e.printStackTrace();
+//               }
+//               recyclerView.setAdapter(new adpater_image(getApplicationContext(),model_images));
+//
+//           }
+//       });
+        AsyncTaskRunner runner = new AsyncTaskRunner();
+        runner.execute("https://via.placeholder.com/500");
+        runner = new AsyncTaskRunner();
+        runner.execute("https://inducesmile.com/wp-content/uploads/2019/09/survey.png");
+        runner = new AsyncTaskRunner();
+        runner.execute("https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg");
 
     }
+    private class AsyncTaskRunner extends AsyncTask<String, String, String> {
+
+        private String resp;
+        ProgressDialog progressDialog;
+
+        @Override
+        protected String doInBackground(String... params) {
+           // publishProgress("Sleeping..."); // Calls onProgressUpdate()
+            Log.d("hello", "doInBackground: background image call");
+               // Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+               try {
+                   model_images.add(new model_image(Picasso.get().load(params[0]).get(),"Render from uri"));
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+
+            return resp;
+        }
+        protected void onPostExecute(String result) {
+            // execution of result of Long time consuming operation
+             recyclerView.setAdapter(new adpater_image(getApplicationContext(),model_images));
+        }
+    }
+
 
 //    private ArrayList<model_image> getimage() {
 //        model_images = new ArrayList<>();
@@ -166,12 +220,8 @@ public class upload_student extends AppCompatActivity {
 //        //ivImage.setImageBitmap(thumbnail);
     }
     private boolean checkPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-            // Permission is not granted
-            return false;
-        }
-        return true;
+        // Permission is not granted
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
@@ -182,7 +232,7 @@ public class upload_student extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
