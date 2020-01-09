@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@color/colorwhite"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/editbutton"
+        android:src="@drawable/ic_action_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:src="@drawable/ic_upload"
+        android:id="@+id/playbutton"
+        android:layout_toRightOf="@+id/editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_toRightOf="@+id/playbutton"
+        android:src="@drawable/ic_down"
+        android:id="@+id/plusbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
